@@ -25,3 +25,10 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+
+      - name: Breakpoint on failure
+        if: failure()
+        uses: namespacelabs/breakpoint-action@v0
+        with:
+          duration: 15m
+          authorized-users: n-g
