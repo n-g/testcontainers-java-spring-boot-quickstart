@@ -1,6 +1,7 @@
 name: Gradle CI Build
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - "**"
